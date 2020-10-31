@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cifrado Cesar</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    
+</head>
+<body>
+    <div class="p-5 mx-5">
+        <div class="clearfix animate__animated animate__rollIn ">
+            <h1 type="text" name="button" class="float-left">CIFRADO CESAR <hr class="hr w-50"></h1>
+            <h4 type="text" name="button" class="float-right animate__animated animate__hinge animate__delay-4s">Valdes Luis Eliot Fabian</h4>    
+           
+        </div>
+
+        <div class="h5 text-muted">
+        <p class="animate__animated animate__backInRight animate__delay-2s">
+            Deberán de realizar una modificación al cifrado cesar visto en clase bajo las siguientes condiciones:
+            <br>1.- Que acepte ñ
+            <br>2.- Que sea a partir de que yo ingrese la posición, y deben aplicar la operación modular de cifrado cesar (cesar mejorado)
+            <br>3.- CSS bonito y kawaii
+            <br> Repo en git, con la rama git pages para poderlo ver e interactuar.
+        </p>
+        </div>
+        <br>
+        <br>
+        <div class="w-100 animate__animated animate__fadeInUp animate__delay-2s">        
+            <form class="input-group-prepend">
+                <span class="input-group-text py-5">Texto a cifrar</span>
+                <textarea class="input-group px-3 w-100" id="cadena" onkeyup="nonum();" ></textarea>                       
+                    <span class="input-group-text ml-5">Semilla</span>
+                    <input class="input-group w-25" id="modulo" type="number" max="50000">                      
+                <!--Boton-->
+                <p><input class="btn-success ml-5 mt-5 px-4" type="button" value="Cifrar" onclick="codificar();" >            
+            </form>
+        
+            <br>
+            <form class="input-group-prepend mt-5">
+                <span class="input-group-text py-4">Texto Cifrado</span>            
+                <textarea class="input-group px-3 w-75" readonly id="resultado" ></textarea>
+                <!--Boton-->
+                <input class="btn-danger  mx-5 my-3 px-5" type="button" value="Decifrar" onclick="decodificar();" > </p>                           
+            </form><br>
+            <span id="notes" class="text-muted alert alert-primary" ></span>        
+            
+            <form class="mt-5">
+                <span class="input-group-text" id="df">Texto Descifrado</span>            
+                <textarea class="input-group w-100" id="des" readonly></textarea>
+            </form>
+           <br>
+            <buitton class="float-right btn btn-link animate__animated animate__flipInX animate__infinite infinite" onclick="clean();">
+               <u> LIMPIAR CAMPOS</u>
+            </button>
+            <br><br>
+        </div>
+    </div>
+    
+    <script src="js/logica.js" ></script>
+
+</body>
+</html>
